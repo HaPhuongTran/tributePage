@@ -7,24 +7,16 @@ var content = "Haruki Murakami began his career in writing after he watched a ba
 
 var count = 0;
 
-function countclick(){
-	
-	document.getElementById("C-click").addEventListener("click", function(){
-		count+=1;
-		if(count>=3){
+function reply_click(obj){
+	var id = obj.id;
+	count+=1;
+	if(count>=3){
+		if(id == "C-click"){
 			document.getElementById("content").innerHTML = "The critical success of Hear the Wind Sing encouraged Murakami to continue writing, and he soon authored two successful sequels, Pinball, 1973 and A Wild Sheep Chase. Murakami has since written 10 additional novels, as well as three collections of short stories and several works of nonfiction. Over the course of his career, Murakami has been awarded several international literary honors, including the Franz Kafka Prize and the Jerusalem Prize. More recently, he was ranked on Time magazine’s 2015 list of the 100 most influential figures in the world";
-			//document.write(tempcount);
-			count =0;
 		}
-	});	
-}
-
-function clickk(){
-	document.getElementById("R-click").addEventListener("click", function(){
-		count+=1;
-		if(count>=3){
+		else {
 			document.getElementById("content").innerHTML = content;
-			count=0;
 		}
-	})
+		count =0;
+	}
 }
